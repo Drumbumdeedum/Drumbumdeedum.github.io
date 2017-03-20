@@ -16,10 +16,6 @@ img {
   display: inline;
 }
 
-.clear{
-  clear:both;
-}
-
 .main{
   width:1440px;
 }
@@ -67,6 +63,10 @@ img {
   background: #EFEFEF;
   text-align: center;
   padding-top: 20px;
+}
+
+.clear{
+  clear:both;
 }
 
 #navigation {
