@@ -255,6 +255,147 @@
         }
     }
 
+    function onMouseDown(event) {
+        console.log('Hi there!');
+        var red = Math.floor(Math.random() * 256);
+        var green = Math.floor(Math.random() * 256);
+        var blue = Math.floor(Math.random() * 256);
+
+        var max = new Point(view.size.width, view.size.height);
+        var randomPoint = Point.random();
+        var point = max * randomPoint;
+
+        var random = Math.floor(Math.random() * 4);
+        var randomSound = Math.floor(Math.random() * 26);
+
+        console.log(random);
+
+        if (random === 0) {
+            var triangle = new Path.RegularPolygon(new Point(point, point), 3, 500);
+            triangle.fillColor = 'rgb(' + red + ', ' + green + ', '+ blue + ')';
+            shapes.push(triangle);
+        }
+        if (random === 1) {
+            var circle = new Path.Circle(new Point(point , point), 500);
+            circle.fillColor = 'rgb(' + red + ', ' + green + ', '+ blue + ')';
+            shapes.push(circle);
+        }
+        if (random === 2) {
+            var decagon = new Path.RegularPolygon(new Point(point, point), 10, 500);
+            decagon.fillColor = 'rgb(' + red + ', ' + green + ', '+ blue + ')';
+            shapes.push(decagon);
+        }
+        if (random === 3) {
+            var rectangle = new Path.RegularPolygon(new Point(point, point), 4, 500);
+            rectangle.fillColor = 'rgb(' + red + ', ' + green + ', '+ blue + ')';
+            shapes.push(rectangle);
+        }
+
+        if(randomSound === 0) {
+            sound01.play();
+        }
+
+        if(randomSound === 2) {
+            sound02.play();
+        }
+
+        if(randomSound === 3) {
+            sound03.play();
+        }
+
+        if(randomSound === 4) {
+            sound04.play();
+        }
+
+        if(randomSound === 5) {
+            sound05.play();
+        }
+
+        if(randomSound === 6) {
+            sound06.play();
+        }
+
+        if(randomSound === 7) {
+            sound07.play();
+        }
+
+        if(randomSound === 8) {
+            sound08.play();
+        }
+
+        if(randomSound === 9) {
+            sound09.play();
+        }
+
+        if(randomSound === 10) {
+            sound10.play();
+        }
+
+        if(randomSound === 11) {
+            sound11.play();
+        }
+
+        if(randomSound === 12) {
+            sound12.play();
+        }
+
+        if(randomSound === 13) {
+            sound13.play();
+        }
+
+        if(randomSound === 14) {
+            sound14.play();
+        }
+
+        if(randomSound === 15) {
+            sound15.play();
+        }
+
+        if(randomSound === 16) {
+            sound16.play();
+        }
+
+        if(randomSound === 17) {
+            sound17.play();
+        }
+
+        if(randomSound === 18) {
+            sound18.play();
+        }
+
+        if(randomSound === 19) {
+            sound19.play();
+        }
+
+        if(randomSound === 20) {
+            sound20.play();
+        }
+
+        if(randomSound === 21) {
+            sound21.play();
+        }
+
+        if(randomSound === 22) {
+            sound22.play();
+        }
+
+        if(randomSound === 23) {
+            sound23.play();
+        }
+
+        if(randomSound === 24) {
+            sound24.play();
+        }
+
+        if(randomSound === 25) {
+            sound25.play();
+        }
+
+        if(randomSound === 1) {
+            sound26.play();
+        }
+    }
+
     function onFrame(event){
         for(var i = 0; i < shapes.length; i++) {
             shapes[i].fillColor.hue += 1;
