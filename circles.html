@@ -127,25 +127,24 @@
         var point = max * randomPoint;
 
         var random = Math.floor(Math.random() * 4);
-        console.log(random);
 
         if (random === 0) {
-            var triangle = new Path.RegularPolygon(new Point(point, point), 3, 500);
+            var triangle = new Path.RegularPolygon(new Point(point, point), 3, 800);
             triangle.fillColor = 'rgb(' + red + ', ' + green + ', '+ blue + ')';
             shapes.push(triangle);
         }
         if (random === 1) {
-            var circle = new Path.Circle(new Point(point , point), 500);
+            var circle = new Path.Circle(new Point(point , point), 800);
             circle.fillColor = 'rgb(' + red + ', ' + green + ', '+ blue + ')';
             shapes.push(circle);
         }
         if (random === 2) {
-            var decagon = new Path.RegularPolygon(new Point(point, point), 10, 500);
+            var decagon = new Path.RegularPolygon(new Point(point, point), 10, 800);
             decagon.fillColor = 'rgb(' + red + ', ' + green + ', '+ blue + ')';
             shapes.push(decagon);
         }
         if (random === 3) {
-            var rectangle = new Path.RegularPolygon(new Point(point, point), 4, 500);
+            var rectangle = new Path.RegularPolygon(new Point(point, point), 4, 800);
             rectangle.fillColor = 'rgb(' + red + ', ' + green + ', '+ blue + ')';
             shapes.push(rectangle);
         }
@@ -256,7 +255,6 @@
     }
 
     function onMouseDown(event) {
-        console.log('Hi there!');
         var red = Math.floor(Math.random() * 256);
         var green = Math.floor(Math.random() * 256);
         var blue = Math.floor(Math.random() * 256);
@@ -267,8 +265,6 @@
 
         var random = Math.floor(Math.random() * 4);
         var randomSound = Math.floor(Math.random() * 26);
-
-        console.log(random);
 
         if (random === 0) {
             var triangle = new Path.RegularPolygon(new Point(point, point), 3, 500);
