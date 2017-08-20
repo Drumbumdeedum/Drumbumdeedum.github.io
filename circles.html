@@ -267,22 +267,22 @@
         var randomSound = Math.floor(Math.random() * 26);
 
         if (random === 0) {
-            var triangle = new Path.RegularPolygon(new Point(event.point), 3, 300);
+            var triangle = new Path.RegularPolygon(new Point(event.point), 3, 200);
             triangle.fillColor = 'rgb(' + red + ', ' + green + ', '+ blue + ')';
             shapes.push(triangle);
         }
         if (random === 1) {
-            var circle = new Path.Circle(new Point(event.point), 300);
+            var circle = new Path.Circle(new Point(event.point), 200);
             circle.fillColor = 'rgb(' + red + ', ' + green + ', '+ blue + ')';
             shapes.push(circle);
         }
         if (random === 2) {
-            var decagon = new Path.RegularPolygon(new Point(event.point), 10, 300);
+            var decagon = new Path.RegularPolygon(new Point(event.point), 10, 200);
             decagon.fillColor = 'rgb(' + red + ', ' + green + ', '+ blue + ')';
             shapes.push(decagon);
         }
         if (random === 3) {
-            var rectangle = new Path.RegularPolygon(new Point(event.point), 4, 300);
+            var rectangle = new Path.RegularPolygon(new Point(event.point), 4, 200);
             rectangle.fillColor = 'rgb(' + red + ', ' + green + ', '+ blue + ')';
             shapes.push(rectangle);
         }
@@ -395,7 +395,7 @@
     function onFrame(event){
         for(var i = 0; i < shapes.length; i++) {
             shapes[i].fillColor.hue += 1;
-            shapes[i].scale(.95);
+            shapes[i].scale(.925);
             if(shapes[i].area < 1){
                 shapes[i].remove();
                 shapes.splice(i, 1);
