@@ -393,9 +393,19 @@
     }
 
     function onFrame(event){
-        for(var i = 0; i < shapes.length; i++) {
-            shapes[i].fillColor.hue += 1;
-            shapes[i].scale(.925);
+        for(var i = 0; i < shapes.length; i++) {       
+
+                shapes[i].fillColor.hue += 1;
+                shapes[i].scale(.925);
+                shapes[i].rotate(3);           
+                shapes[i].position += 5;
+
+                console.log(shapes[i]);
+           
+            
+
+            
+
             if(shapes[i].area < 1){
                 shapes[i].remove();
                 shapes.splice(i, 1);
