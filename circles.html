@@ -393,18 +393,13 @@
     }
 
     function onFrame(event){
-        console.log(random)
-
         for(var i = 0; i < shapes.length; i++) {       
-
             shapes[i].fillColor.hue += 1;
-            shapes[i].scale(.925);
-            
+            shapes[i].scale(.925);     
             shapes[i].rotate(3);           
             var destination = Point.random() * view.size;
             var vector = destination - shapes[i].position;
             shapes[i].position += vector / 50;              
-
             if(shapes[i].area < 1){
                 shapes[i].remove();
                 shapes.splice(i, 1);
