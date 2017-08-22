@@ -397,7 +397,7 @@
             shapes[i].fillColor.hue += 1;
             shapes[i].scale(.925);     
             shapes[i].rotate(3);           
-            var destination = Point.random() * view.size;
+            var destination = Point.random() * view.size / 200;
             var vector = destination - shapes[i].position;
             shapes[i].position += vector / 50;              
             if(shapes[i].area < 1){
