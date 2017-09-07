@@ -14,7 +14,7 @@ body {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-gap: 10px;
-  text-align: center;
+  text-align: left;
 }
 
 #pandaLogo {
@@ -82,8 +82,10 @@ body {
 }
 
 .imageDisplay {
-  width: 50%;
+  padding: 10px;
   margin: 20px auto;
+  display: block;
+  text-align: center;
 }
 
 a {
@@ -100,6 +102,8 @@ form {
 }
 
 .orderNow {
+  display: block;
+  text-align: center;
   width: 120px;
   height: 50px;
   line-height: 40px;
@@ -121,11 +125,11 @@ form {
   background: -webkit-linear-gradient(to bottom, #000046, #1cb5e0); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #000046, #1cb5e0);
   font-weight: bold;
+  cursor: pointer;
 }
 
 .orderNow:active {
   vertical-align: top;
-  margin-right: 2px;
 }
 
 .imageBanner {
@@ -137,4 +141,13 @@ form {
 
 iframe {
   margin-bottom: 10px;
+}
+
+.contacts {
+  text-align: left;
+  padding: 0 15px;
+}
+
+img {
+  margin: auto;
 }
