@@ -120,6 +120,10 @@ form {
   margin: auto;
 }
 
+.orderNow:focus {
+  outline:0;
+}
+
 .orderNow:hover {
   background: #000046; /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #000046, #1cb5e0); /* Chrome 10-25, Safari 5.1-6 */
