@@ -25,46 +25,90 @@
     <a class="menuOption" href="mailto:info@panda-audio.com">Contact us</a>
   </div>
 
-  <div class="imageBanner">
-  </div>
-
   <div id="contentWrapper" align="left">
-    <div class="content">
+    <div class="fullpage_content">
       <div class="bar barTop">&nbsp;</div>
 
-      <h3 class="contentParagraph">
-      </h3>
-
       <p class="contentParagraph">
+        I spent most of the last thirty years designing guitar synthesizers.
+        I developed several generations of devices from the Shadow GTM-6 / SH-075 through
+        the Blue Chip Music / Terratec Axon until the Fishman Triple Play today. Over this
+        period I answered thousands of questions from users who had some difficulties to
+        understand certain features or behavior of their devices. Now, as I have here a
+        web page of my company, Panda-Audio, I want to take the opportunity to summarize
+        this information in the form of an FAQ. I hope I can help users of guitar
+        synthesizers a better understanding of their devices with this information.
+        While these answers are based on my designs, I believe most of the information
+        here is true for Roland or other devices too. I will update this page time to
+        time with questions whatever I recall from my memories, or whatever new questions arise.
+      </p>
+
+      <p class="contentParagraph signed">
+        - Andras Szalay
+      </p>
+
+      <div class="bar">&nbsp;</div>
+
+      <p class="contentParagraph question">
+        Q: Why do most guitar synthesizers have an option to send the six strings on six
+        separate MIDI channels? E.g. you can play polyphonically on a keyboard without
+        estriction on only one MIDI channel.
+      </p>
+
+      <p class="contentParagraph answer">
+        A: When a note is started in MIDI the pitch of the note is determined by the
+        note number of the Note On message. This pitch can be changed afterwards only
+        with Pitch Bend messages. When you play polyphonically on a keyboard and you use
+        the pitch bend wheel, it will bend all notes what you play by the same amount.
+        In opposite, on a guitar it is absolutely natural that the pitch of individual
+        strings can change individually, independently of the other strings. Since in
+        MIDI the Pitch Bend message is common for all notes on a MIDI channel, individual
+        pitch control of the notes for individual strings can be solved only if each
+        string has its own separate MIDI channel. As a painful compromise it is possible
+        to use pitch bend on one MIDI channel as long as the guitarist plays only a
+        monophonic melody, and turn off pitch bend when he changes to polyphony. However,
+        this can lead to contradictions that cannot be resolved in certain situations, e.g.
+        when the pitch of a note is changed, and this note is sustained while another note is
+        suddenly started. In this case, at the start of the second note the first one will
+        have to return to its starting pitch, or it must be shut off early.
+      </p>
+
+      <p class="contentParagraph question">
+        Q: OK, I do not bend the strings, so I could not care less. Then can I use my
+        guitar synthesizer on one channel without compromises, yes?
+      </p>
+
+      <p class="contentParagraph answer">
+        A: No. A very important part of expressive guitar playing is legato. Guitarists
+        very often do not pick every note of a melody, but notes get different accent if
+        they are picked, or if they are played with hammer-on or pull-off. A guitar
+        synthesizer can emulate this also with Pitch Bend. Although a special Legato Mode
+        is part of the MIDI specification, most synthesizers did not implement it, so the
+        safe way is to use Pitch Bend instead. Then we are at the same point as in the
+        question before.
+      </p>
+
+      <p class="contentParagraph question">
+        Q: OK, I do not use hammer-on and pull-off, I pick every note. Then I really do not
+        need Pitch Bend, so I can use one channel only, right?
+      </p>
+
+      <p class="contentParagraph answer">
+        A: No. There are at least two important arguments why Pitch Bend should be used even if you pick every note.
+        <ul>
+          <li></li>
+        </ul>
+      </p>
+
+      <p class="contentParagraph question">
 
       </p>
-      <p lass="contentParagraph">
 
-      </p>
+      <p class="contentParagraph answer">
 
-      <form action="http://www.pandamidi.com">
-        <button class="orderNow" >Order now</button>
-      </form>
-
-      <p class="contentParagraph">
       </p>
 
       <div class="bar barBottom">&nbsp;</div>
-    </div>
-
-    <div class="images">
-      <p class="imageDisplay">
-        <img />
-      </p>
-      <p class="imageDisplay">
-        <img />
-      </p>
-      <p class="imageDisplay">
-        <img />
-      </p>
-      <p class="imageDisplay">
-        <img />
-      </p>
     </div>
 
   </div>
