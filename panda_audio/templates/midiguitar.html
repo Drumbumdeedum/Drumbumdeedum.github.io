@@ -95,17 +95,121 @@
 
       <p class="contentParagraph answer">
         A: No. There are at least two important arguments why Pitch Bend should be used even if you pick every note.
-        <ul>
-          <li></li>
-        </ul>
+        <ol>
+          <li>
+            <p class="contentParagraph">
+              Coordination of left and right hand.
+              If you play an ascending scale on a string, theoretically you should press the string to the
+              fret with your left had finger (I mean this for right handed guitarists) exactly at the same
+              time as you pick it with the right hand. Of course, this is only theory. In practice this can
+              never be coordinated perfectly. If you are too early with your left hand, then you get a hammer-on
+              to the new note first, and then a little bit later the note is picked. Even worse if your left
+              hand is too late, then there is a chance that you get a damped note, because your finger already
+              touches the string, but does not press it to the fret yet. To avoid the second situation which
+              is much more annoying, guitarists play a little bit ahead with the left hand compared to the
+              right. The question is how much, and how stable is this difference. When I analyzed John
+              McLaughlin's test recording, it was amazing to see that pitch changes (left hand) were always
+              just 5-10 msec ahead of the pickings (right hand). By average guitarists this can be 10 times
+              more. Now, when the guitar synthesizer is sensing a hammer-on (which is not intentional in
+              this case), and Pitch Bend is enabled, then it follows the pitch in a natural way, and then
+              when the new note is picked additionally, it starts a new note at that pitch. In opposite,
+              if Pitch Bend is disabled, then during the hammer-on phase the guitar synthesizer does not
+              know that soon a new pick is following, so it starts a new note with a low velocity value.
+              But very soon the new picking is coming (with a higher velocity value), and this results
+              in an annoying double trigger.
+            </p>
+          </li>
+          <li>
+            <p class="contentParagraph">
+              Unintended pitch change of the sound.
+              When you pick a string, at the very beginning the pitch is always more or less higher than
+              the intended pitch. I mean "intended pitch" here the pitch of the string as it is sustained
+              for several seconds. This is where you tune the string to your reference. There are several
+              physical reasons why the pitch at the very beginning is higher than the sustained value,
+              sometimes by more than a semitone.
+              One of the reasons is well known in classical physics: the pitch of a string vibration
+              has a steady frequency only if the amplitude of the vibration is negligible to the length
+              of the string. If it is not negligible, then the vibration causes an increased average tension
+              in the string, and higher tension means higher pitch. This effect depends on two factors:
+            </p>
+            <ul>
+              <li>
+                <p class="contentParagraph">
+                  the tension of the string: thin strings have lower tension for the same pitch, so can
+                  e played with much higher amplitude, thus the pitch deviation is higher as well.
+                </p>
+              </li>
+              <li>
+                <p class="contentParagraph">
+                  the harder you pick, the higher is the deviation.
+                </p>
+              </li>
+            </ul>
+              There is another reason for unintended high pitch in the attack. The short picking pulse
+              that started from your pick is propagating towards the point where you fretted the string.
+              However, if the pulse is large (you picked hard), and the string deviation is large (light
+              gauge string), and the string height is low, then the pulse slightly hits the fret that is
+              one higher than the one that you fretted, simply because the string is so close to this fret.
+              This results a reflection from this fret that appears in the first vibration cycle as a one
+              semitone higher note. This happens only in the very first cycle of the vibration, since the
+              amplitude of the pulse gets very much smaller even by the second reflection.
+              It is of course natural, if you do not get this problem with a Roland, since it does not
+              recognize pitch from the first cycle anyway. Also, it is good to know that if you turn the
+              pick sensitivity to finger picking, it will skip recognition in the first cycle, so this
+              problem will probably not happen. With this knowledge, here are some tips how to eliminate
+              this problem:
+            <ul>
+              <li>
+                <p class="contentParagraph">
+                  First and most important: Even with a piano sound it is not necessary to play in Trigger
+                  mode. If you use Quantize to semitones then you get just as well quantized pitch like in
+                  trigger mode, but these glitches at the very beginning of the note will not be audible,
+                  if the synth has a good and fast response. Of course, this works really well only in
+                  MONO mode, on six MIDI channels.
+                </p>
+              </li>
+              <li>
+                <p class="contentParagraph">
+                  Use medium or hard gauge strings, no light or extra light.
+                </p>
+              </li>
+              <li>
+                <p class="contentParagraph">
+                  Adjust the string height to be as high as you can tolerate.
+                </p>
+              </li>
+              <li>
+                <p class="contentParagraph">
+                  Play softly, do not pick hard.
+                </p>
+              </li>
+              <li>
+                <p class="contentParagraph">
+                  Play with the tip of the plectrum, not with the flat part
+                </p>
+              </li>
+              <li>
+                <p class="contentParagraph">
+                  Finger Picking Mode, if the slightly slower response does not hurt.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ol>
       </p>
 
       <p class="contentParagraph question">
-
+        Q: When I use Trigger Mode and I play a hammer-on, then I understand that I get a new note,
+        but why is it slightly delayed?
       </p>
 
       <p class="contentParagraph answer">
-
+        A: See the first part of the previous answer about left-right hand coordination.
+        In order to avoid a very annoying double trigger, when the system recognizes
+        a hammer-on while in Trigger Mode, it will intentionally delay the new note,
+        waiting a little bit if a new picking is coming or not. It will trigger a
+        new note based on the hammer-on only if the picking does not come in the
+        expected timeFrame.
       </p>
 
       <div class="bar barBottom">&nbsp;</div>

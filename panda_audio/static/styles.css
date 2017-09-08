@@ -164,3 +164,7 @@ iframe {
 img {
   margin: auto;
 }
+
+.question {
+  font-weight: bold;
+}
