@@ -20,13 +20,13 @@ body {
 }
 
 #menu {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  display: flex;
+  grid-template-columns: repeat(8, 1fr);
   grid-gap: 3px;
   background-color: #353535;
   height: 40px;
   line-height: 40px;
-  border: 3px solid #353535;
+  border: 2px solid #353535;
   border-radius: 5px;
 }
 
@@ -36,7 +36,9 @@ body {
   text-align: center;
   height: 40px;
   transition: all ease-in-out 300ms;
-  border-radius: 3px;
+  border-radius: 2px;
+  padding: 0 6px;
+  font-size: 14px;
 }
 
 .menuOption:hover {
